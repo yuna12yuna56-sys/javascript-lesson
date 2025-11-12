@@ -131,3 +131,61 @@ console.log(x + 'を' + y + 'で割った余りは' + remainder(x, y) + 'です�
 // xはfoo関数内のローカル変数でのみ定義されている。
 // グローバル変数では定義されていないため、xのスコープはfoo関数内のみとなる。
 // よって関数の外に記載されたconsole.log(x)はfoo関数内のローカル変数を参照できず、エラーを起こしている。
+
+// Q1 標準組み込みオブジェクト
+// 標準組み込みオブジェクト Math を使用し、0 ~ 9 のランダムな整数をコンソールに出力してください。
+console.log(Math.floor(Math.random() * 11));//Math.random();は1未満までの乱数を生成するため11でかける
+
+// Q2 コールバック関数
+// 関数 setTimeout を使用し、3 秒後に以下のようにコンソールに出力してください。
+let hello = function() {
+  console.log('Hello World!');
+}
+setTimeout(hello, 3000);
+
+// Q3 if
+// 変数 num に 任意の数値を代入し、下記条件のもと文字列をコンソールに出し分ける処理を作成してください。
+
+// 条件
+// ・num が 0 より大きければnum is greater than 0
+// ・num が 0 より小さければnum is less than 0
+// ・num が 0 であればnum is 0
+let num = 1;
+
+if (num > 0) {
+  console.log('num is greater than 0');
+} else if (num < 0) {
+  console.log('num is less than 0');
+} else if (num === 0) {
+  console.log('num is 0');
+}
+
+// Q4 for
+// 変数 numbers に空の配列を代入した後、0 ~ 99 までの数字を変数 numbers に全て追加し、値が追加された状態の変数 numbers をコンソールに出力してください
+let numbers = [];
+
+for (i = 0; numbers.length < 100; i++) {
+  numbers[i] = i;
+  console.log(numbers[i]);
+}
+
+// Q5 for × if
+// 以下の変数 mixed から 要素を一つずつ取り出し、下記条件のもと文字列をコンソールに出し分ける処理を作成してください。
+
+// let mixed = [4, '2', 5, '8', '9', 0, 1];
+// 条件
+// Number であり偶数の時は even
+// Number であり奇数の時は odd
+// Number 以外の時は not number
+
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (i = 0; i < mixed.length; i++) {
+  if (typeof mixed[i] === 'number' && mixed[i] % 2 === 0){
+    console.log('even');
+  } else if (typeof mixed[i] === 'number' && mixed[i] % 2 !== 0){
+    console.log('odd');
+  } else {
+    console.log('not number');
+  }
+}
