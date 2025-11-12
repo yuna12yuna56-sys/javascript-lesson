@@ -1,3 +1,5 @@
+// section5
+
 // Q1 変数
 // 変数 nickname, age に自分の名前と年齢を代入し、文字列連結で以下のようにコンソールに出力してください。
 let nickname = '新澤優菜';
@@ -132,9 +134,11 @@ console.log(x + 'を' + y + 'で割った余りは' + remainder(x, y) + 'です�
 // グローバル変数では定義されていないため、xのスコープはfoo関数内のみとなる。
 // よって関数の外に記載されたconsole.log(x)はfoo関数内のローカル変数を参照できず、エラーを起こしている。
 
+// section6
+
 // Q1 標準組み込みオブジェクト
 // 標準組み込みオブジェクト Math を使用し、0 ~ 9 のランダムな整数をコンソールに出力してください。
-console.log(Math.floor(Math.random() * 11));//Math.random();は1未満までの乱数を生成するため11でかける
+console.log(Math.floor(Math.random() * 10));//Math.random();は1未満までの乱数を生成するため11でかける
 
 // Q2 コールバック関数
 // 関数 setTimeout を使用し、3 秒後に以下のようにコンソールに出力してください。
@@ -163,6 +167,7 @@ if (num > 0) {
 // Q4 for
 // 変数 numbers に空の配列を代入した後、0 ~ 99 までの数字を変数 numbers に全て追加し、値が追加された状態の変数 numbers をコンソールに出力してください
 let numbers = [];
+let i;
 
 for (i = 0; numbers.length < 100; i++) {
   numbers[i] = i;
