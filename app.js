@@ -167,9 +167,8 @@ if (num > 0) {
 // Q4 for
 // 変数 numbers に空の配列を代入した後、0 ~ 99 までの数字を変数 numbers に全て追加し、値が追加された状態の変数 numbers をコンソールに出力してください
 let numbers = [];
-let i;
 
-for (i = 0; numbers.length < 100; i++) {
+for (let i = 0; numbers.length < 100; i++) {
   numbers[i] = i;
   console.log(numbers[i]);
 }
